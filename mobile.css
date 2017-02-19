@@ -1,3 +1,12 @@
+@media only screen and (min-width:1280px) {
+        body {
+                background-image: url("images/bkg_jam.jpg");
+                background-position: center;
+                background-attachment: fixed;
+                background-size: cover;
+        }
+}
+
 @media only screen and (max-width:1440px) {
         main {
                 padding: 0 11vw;

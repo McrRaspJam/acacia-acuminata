@@ -1,10 +1,10 @@
 /*
-Theme Name: Press and Forget
-Theme URI: https://github.com/SecretImbecile/pressandforget
+Theme Name: Acacia Acuminata
+Theme URI: https://github.com/McrRaspJam/acacia-acuminata
 Author: Jack Kelly
 Author URI: http://www.jackjkelly.com
 Description: A lightweight WordPress theme, utilising CSS flexbox to minimise media queries and format-specific exceptions.
-Version: 0.9
+Version: 3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,8 +12,8 @@ This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400');
+@import url('https://fonts.googleapis.com/css?family=Oswald:400');
 
 body {
         min-width: 320px;
@@ -29,9 +29,9 @@ a {text-decoration: none;}
 strong {font-weight: 400;}
 
 h1 {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
         text-align: center;
-        font-weight: 300;
-        color: black;
 }
 h1 {font-size: 2.5em;}
 h2 {font-size: 1.5em;  margin: 0.75em 0;}
@@ -39,7 +39,7 @@ h3 {font-size: 1.25em; margin: 0.5em 0;}
 h4 {font-size: 1em; margin: 0.25em 0;}
 h2,h3,h4 {font-weight: 400;}
 
-h1, h2, h3, h1 a, h2 a, h3 a {color:#0080ff;}
+h1, h2, h3, h1 a, h2 a, h3 a {color:#e03e61;}
 h4, h4 a {color:black;}
 
 /* Page Layout */
@@ -72,13 +72,13 @@ header {
         padding-top: 2em;
         text-align: center;
 }
-header a {color:black;}
 header>h1 {margin:0 auto;}
 header>em {
         line-height: 0.5;
-        font-style: italic;
+        font-family: 'Oswald', sans-serif;
+        font-style: normal;
         font-size: 1.25em;
-        font-weight: 300;
+        font-weight: 400;
         color: #777;
 }
 
@@ -141,7 +141,7 @@ article img {border-radius: 4px; overflow: hidden;}
         align-items: stretch;
 
         color: #fff;
-        background-color: #0080ff;
+        background-color: #e03e61;
         box-shadow: 0 0px 16px rgba(0,0,0,0.5);
 }
 
@@ -158,7 +158,7 @@ article img {border-radius: 4px; overflow: hidden;}
 }
 
 #navbar>a:hover {
-        background-color: #3399ff;
+        background-color: #ff4c73;
 }
 
 .navspacer {
@@ -182,14 +182,14 @@ article img {border-radius: 4px; overflow: hidden;}
         flex-grow: 3;
 }
 
-#searchform input {border: 1px solid #0073e5;}
+#searchform input {border: 1px solid #bf304f;}
 
 #searchform>input:nth-child(2) {
         flex-grow: 1;
-        background-color: #0080ff;
+        background-color: #e03e61;
         color: #fff;
 }
-#searchform>input:nth-child(2):hover {background-color: #3399ff;}
+#searchform>input:nth-child(2):hover {background-color: #ff4c73;}
 
 /* Footer */
 main>footer{
