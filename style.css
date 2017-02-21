@@ -1,5 +1,5 @@
 /*
-Theme Name: Acacia Acuminata
+Theme Name: Acacia Acuminata 3
 Theme URI: https://github.com/McrRaspJam/acacia-acuminata
 Author: Jack Kelly
 Author URI: http://www.jackjkelly.com
@@ -26,6 +26,7 @@ body {
 }
 
 a {text-decoration: none;}
+a:link{color:#E03E61;}
 strong {font-weight: 400;}
 
 h1 {
@@ -39,7 +40,7 @@ h3 {font-size: 1.25em; margin: 0.5em 0;}
 h4 {font-size: 1em; margin: 0.25em 0;}
 h2,h3,h4 {font-weight: 400;}
 
-h1, h2, h3, h1 a, h2 a, h3 a {color:#e03e61;}
+h1, h2, h3, h1 a, h2 a, h3 a {color:#E03E61;}
 h4, h4 a {color:black;}
 
 /* Page Layout */
@@ -96,6 +97,19 @@ article>h2 {
         margin: 0;
 }
 
+.more-link {
+	display: block;
+	text-align:center;
+}
+/* makes button links too stylish
+.more-link>span, #prevnext>a{
+        padding: 2px 1em;
+        background-color: #E03E61;
+        color: #fff;
+        border-radius: 4px;
+}
+*/
+
 .tags {
         text-align: right;
         font-size: 0.8em;
@@ -128,6 +142,17 @@ article img {border-radius: 4px; overflow: hidden;}
         margin: 0.5em auto;
 }
 
+.video {
+        width: 100%;
+        height: auto;
+        text-align: center;
+}
+.video iframe{
+        max-width: 100%;
+        display: inline-block;
+}
+
+
 /* Navbar */
 
 #navbar {
@@ -141,7 +166,7 @@ article img {border-radius: 4px; overflow: hidden;}
         align-items: stretch;
 
         color: #fff;
-        background-color: #e03e61;
+        background-color: #E03E61;
         box-shadow: 0 0px 16px rgba(0,0,0,0.5);
 }
 
@@ -158,7 +183,7 @@ article img {border-radius: 4px; overflow: hidden;}
 }
 
 #navbar>a:hover {
-        background-color: #ff4c73;
+        background-color: #FF4C73;
 }
 
 .navspacer {
@@ -182,16 +207,31 @@ article img {border-radius: 4px; overflow: hidden;}
         flex-grow: 3;
 }
 
-#searchform input {border: 1px solid #bf304f;}
+#searchform input {border: 1px solid #BF304F;}
 
 #searchform>input:nth-child(2) {
         flex-grow: 1;
-        background-color: #e03e61;
+        background-color: #E03E61;
         color: #fff;
 }
-#searchform>input:nth-child(2):hover {background-color: #ff4c73;}
+#searchform>input:nth-child(2):hover {background-color: #FF4C73;}
 
 /* Footer */
+#prevnext {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        margin-bottom: 4em;
+}
+
+#prevnext>* {
+        flex-grow: 0;
+}
+#prevnextspacer {
+        flex-grow: 1;
+}
+
+
 main>footer{
         font-style: italic;
         text-align: center;

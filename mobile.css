@@ -39,6 +39,9 @@
                 text-align: left;
                 line-height: 1.35;
         }
+        header img {
+		display:none;
+	}
         #navbar {
                 position: initial;
                 box-shadow: none;
