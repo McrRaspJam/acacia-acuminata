@@ -19,11 +19,30 @@ function meta_description() {
         the_excerpt();
     }
     else {
-        echo 'A Minimal WordPress theme';
+        echo 'The Manchester-based Raspberry Pi user group';
     }
 }
 
-register_nav_menu('primary', 'Nav Bar');
+function random_404_message() {
+    $random_1 = rand(0, 2);
+    $random_2 = rand(0, 2);
+
+    $words = array(
+        'Raspberry',
+        'Jam',
+        'Pi'
+    );
+
+    $word = $words[$random_1];
+
+    $messages = array(
+        "No {$word} here...",
+        "This is not the {$word} you are looking for...",
+        "The {$word} you requested could not be found",
+    );
+
+    echo $messages[$random_2];
+}
 
 /* Filters */
 
@@ -43,6 +62,9 @@ wp_enqueue_style( 'mobile', get_stylesheet_directory_uri() . '/mobile.css' );
 wp_enqueue_style( 'print', get_stylesheet_directory_uri() . '/print.css' );
 
 /* Theme Support*/
+
+register_nav_menu('primary', 'Nav Bar');
+register_nav_menu('company', 'Footer Nav');
 
 $headerargs = array(
 	'width'         => 128,

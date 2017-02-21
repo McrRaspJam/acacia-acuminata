@@ -221,7 +221,7 @@ article img {border-radius: 4px; overflow: hidden;}
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-between;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
 }
 
 #prevnext>* {
@@ -231,13 +231,34 @@ article img {border-radius: 4px; overflow: hidden;}
         flex-grow: 1;
 }
 
+#footer {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
 
-main>footer{
+        padding: 1em;
+        border-top: 1px solid #ccc;
+}
+
+#footernav {
+        flex-basis: auto;
+        flex-grow: 0;
+        
+        display: flex;
+        flex-flow: column nowrap;
+
+        white-space: nowrap;
+}
+
+#footertext{
+        flex-basis: 50%;
+        flex-grow: 4;
+
         font-style: italic;
         text-align: center;
         font-size: 0.8em;
         margin-bottom: 1em;
 }
-main>footer p{
+#footertext p{
         margin: 0;
 }

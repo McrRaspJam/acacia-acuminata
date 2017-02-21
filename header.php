@@ -10,11 +10,11 @@
 		<?php wp_head(); ?>
 	</head>
 	<body>
-		<?php get_template_part('nav'); ?>
+		<?php get_template_part('nav', 'header'); ?>
 		<div id="page">
 			<main>
 				<header>
-					<?php if ( has_header_image() ) { ?>
+					<?php if ( has_header_image() && is_home() ) { ?>
 						<a href="<?php echo get_home_url(); ?>">
 							<img src="<?php echo( get_header_image() ); ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
 						</a>
