@@ -1,4 +1,4 @@
-<div id="footernav">
+<nav id="footernav">
         <?php
                 $footerMenuParameters = array(
                         'theme_location' => 'company',
@@ -10,4 +10,4 @@
 
                 echo strip_tags(wp_nav_menu( $footerMenuParameters ), '<a>' );
         ?>
-</div>
+</nav>

@@ -44,6 +44,67 @@ function random_404_message() {
     echo $messages[$random_2];
 }
 
+/* Custom field posts */
+
+add_action('init', 'create_supporters_post_type');
+add_action('init', 'create_friends_post_type');
+
+function create_supporters_post_type() {
+        register_post_type('supporters',
+                array(
+                        'labels' => array(
+                                'name' => 'Supporters',
+                                'singular_name' => 'Supporter',
+                                'add_new' => 'Add New',
+                                'add_new_item' => 'Add New Supporter',
+                                'edit_item' => 'Edit Supporter',
+                                'new_item' => 'New Supporter',
+                                'all_items' => 'All Supporters',
+                                'view_item' => 'View Supporter',
+                                'search_items' => 'Search Supporters',
+                                'not_found' =>  'No Supporters Found',
+                                'not_found_in_trash' => 'No Supporters found in Trash',
+                                'menu_name' => 'Supporters',
+                        ),
+                        'public' => true,
+                        'has_archive' => false,
+                        'rewrite' => array('slug' => 'supporter'),
+                        'supports' => array('title', 'excerpt', 'thumbnail'),
+                )
+        );
+
+        add_theme_support('post-thumbnails', array('supporters'));
+}
+
+
+        function create_friends_post_type() {
+                register_post_type('friends',
+                        array(
+                                'labels' => array(
+                                        'name' => 'Friends',
+                                        'singular_name' => 'Friend',
+                                        'add_new' => 'Add New',
+                                        'add_new_item' => 'Add New Friend',
+                                        'edit_item' => 'Edit Friend',
+                                        'new_item' => 'New Friend',
+                                        'all_items' => 'All Friends',
+                                        'view_item' => 'View Friend',
+                                        'search_items' => 'Search Friends',
+                                        'not_found' =>  'No Friends Found',
+                                        'not_found_in_trash' => 'No Friends found in Trash',
+                                        'menu_name' => 'Friends',
+                                ),
+                                'public' => true,
+                                'has_archive' => false,
+                                'rewrite' => array('slug' => 'friend'),
+                                'supports' => array('title', 'excerpt', 'thumbnail'),
+                        )
+                );
+
+                add_theme_support('post-thumbnails', array('friends'));
+}
+
+
 /* Filters */
 
 function my_embed_oembed_html($html, $url, $attr, $post_id) {

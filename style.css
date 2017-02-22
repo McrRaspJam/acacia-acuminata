@@ -127,12 +127,13 @@ blockquote {
         border-radius: 4px;
 }
 
-article div, article img {
+article img {
         max-width: 32em;
         height: auto;
         display: block;
         margin: 0 auto;
 }
+article div {max-width: 32em;}
 article img {border-radius: 4px; overflow: hidden;}
 
 .wp-caption-text {
@@ -152,6 +153,29 @@ article img {border-radius: 4px; overflow: hidden;}
         display: inline-block;
 }
 
+/* Friends & Supporters */
+
+#associates {
+        max-width: 100%;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: stretch;
+}
+
+.associate {
+        flex-basis: 192px;
+        flex-grow: 1;
+
+        margin: 4px;
+        padding: 4px 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #fff;
+
+        text-align: left;
+}
 
 /* Navbar */
 
@@ -243,7 +267,7 @@ article img {border-radius: 4px; overflow: hidden;}
 #footernav {
         flex-basis: auto;
         flex-grow: 0;
-        
+
         display: flex;
         flex-flow: column nowrap;
 
@@ -257,7 +281,6 @@ article img {border-radius: 4px; overflow: hidden;}
         font-style: italic;
         text-align: center;
         font-size: 0.8em;
-        margin-bottom: 1em;
 }
 #footertext p{
         margin: 0;

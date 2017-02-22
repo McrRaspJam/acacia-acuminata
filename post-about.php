@@ -5,7 +5,9 @@
 
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-        <?php the_content(); ?>
+        <?php the_content();
+
+        get_template_part('custom', 'supporter'); ?>
 
         <?php if (!is_page()): ?>
                 <nav class="tags">
