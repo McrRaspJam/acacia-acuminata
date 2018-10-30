@@ -119,8 +119,8 @@ add_filter( 'the_content_more_link', 'modify_read_more_link' );
 
 /* Stylesheets */
 
-wp_enqueue_style( 'mobile', get_stylesheet_directory_uri() . '/mobile.css' );
-wp_enqueue_style( 'print', get_stylesheet_directory_uri() . '/print.css' );
+wp_enqueue_style( 'mobile', get_stylesheet_directory_uri() . '/assets/css/mobile.css' );
+/* wp_enqueue_style( 'print', get_stylesheet_directory_uri() . '/assets/css/print.css' ); */
 
 /* Theme Support*/
 

@@ -1,0 +1,41 @@
+@media only screen and (max-width:999px) {
+        body {
+                background-color: #ffffff;
+        }
+
+        #navbar .container {
+                padding: 0 1ch;
+        }
+
+        #page {
+                margin: 0;
+                background-color: transparent;
+                box-shadow: none;
+        }
+}
+
+@media only screen and (max-width:782px) {
+        body {
+                font-size: 12pt;
+        }
+        
+        #page { padding: 0 6ch; }
+        #page header h1 { font-size: 2.5rem; }
+        #page header em { font-size: 1.5rem; }
+}
+
+@media only screen and (max-width:539px) {
+        #page { padding: 0 4ch; }
+        #page header h1 { font-size: 2rem; }
+        #page header em { font-size: 1.25rem; }
+}
+
+@media only screen and (max-width:399px) {
+        #navbar nav {
+                flex-flow: column nowrap;
+        }
+
+        #page { padding: 0 2ch; }
+        #page header h1 { font-size: 1.5rem; }
+        #page header em { font-size: 1rem; }
+}

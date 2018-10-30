@@ -11,14 +11,8 @@
 	</head>
 	<body>
 		<?php get_template_part('nav', 'header'); ?>
-		<div id="page">
-			<main>
-				<header>
-					<?php if ( has_header_image() && is_home() ) { ?>
-						<a href="<?php echo get_home_url(); ?>">
-							<img src="<?php echo( get_header_image() ); ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-						</a>
-					<?php } ?>
-					<h1><a href="<?php echo get_home_url(); ?>"><?php bloginfo('title'); ?></a></h1>
-					<em><?php bloginfo('description'); ?></em>
-				</header>
+		<main id="page">
+			<header>
+				<h1><a href="<?php echo get_home_url(); ?>"><?php bloginfo('title'); ?></a></h1>
+				<em><?php bloginfo('description'); ?></em>
+			</header>

@@ -1,0 +1,5 @@
+@media only print {
+        html, body {
+                color: red !important;
+        }
+}

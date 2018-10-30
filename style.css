@@ -9,81 +9,123 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
+Use it to make something cool, have f;n, and share what you've learned with others.
 */
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400');
+@import url('assets/css/bootstrap-reboot.min.css');
 @import url('https://fonts.googleapis.com/css?family=Oswald:400');
+
+
+/* Common */
+
 
 body {
         min-width: 320px;
-        margin: 0;
-
-        background-color: #eee;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 300;
+        background-color: #f9f9f9;
         font-size: 14pt;
 }
-
-a {text-decoration: none;}
-a:link{color:#E03E61;}
-strong {font-weight: 400;}
 
 h1 {
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
         text-align: center;
 }
-h1 {font-size: 2.5em;}
-h2 {font-size: 1.5em;  margin: 0.75em 0;}
-h3 {font-size: 1.25em; margin: 0.5em 0;}
-h4 {font-size: 1em; margin: 0.25em 0;}
-h2,h3,h4 {font-weight: 400;}
+h1, h2, h3, h1 a, h2 a, h3 a {color:#e5286d !important;}
+a {text-decoration: none !important;}
 
-h1, h2, h3, h1 a, h2 a, h3 a {color:#E03E61;}
-h4, h4 a {color:black;}
 
-/* Page Layout */
+/* Navbar */
 
-#page {
-        margin: 0;
+
+#navbar {
+        position:relative;
+        height: auto;
         width: 100%;
+
+        color: #ffffff;
+        background-color: #e5286d;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#navbar>.container {
+        max-width: 100%;
+        width: 1200px;
+        height: auto;
+        margin: 0 auto;
 
         display: flex;
         flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+}
+
+#navbar img {
+        width: 40px;
+        height: 40px;
+        margin: 4px;
+}
+
+#navbar nav {
+        height: auto;
+        line-height: 48px;
+
+        display: flex;
+        flex-flow: row wrap;
         align-items: stretch;
-        justify-content: space-around;
+        justify-content: flex-end;
 }
 
-main {
-        max-width: 100%;
-        flex-basis: 35em;
-        flex-shrink: 1;
-        padding: 0 8em;
-        padding-top: 32px;
+#navbar nav a {
+        height: 48px;
+        padding: 0 4ch;
+        color: #ffffff;
+}
 
-        text-align: justify;
+#navbar nav a:hover { background-color: #cb2461; }
+
+
+/* Page Layout */
+
+
+#page {
+        max-width: 100vw;
+
+        width: 1000px;
+        padding: 0 100px;
+        margin: 0 auto;
+
         line-height: 1.5;
-        background-color: #fff;
-        border: 1px solid #ccc;
+        background-color: #ffffff;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
+
 
 /* Header */
-header {
+
+
+#page header {
         padding-top: 2em;
+        margin-bottom: 4em;
+
         text-align: center;
 }
-header>h1 {margin:0 auto;}
-header>em {
-        line-height: 0.5;
+
+#page header h1 {
+        font-size: 3rem;
+        margin: 0 auto;
+}
+
+#page header em {
+        font-size: 1.75rem;
         font-family: 'Oswald', sans-serif;
+        line-height: 0.5;
         font-style: normal;
-        font-size: 1.25em;
-        font-weight: 400;
         color: #777;
 }
 
+
 /* Articles */
+
 
 article {
         margin: 4em 0;
@@ -101,14 +143,6 @@ article>h2 {
 	display: block;
 	text-align:center;
 }
-/* makes button links too stylish
-.more-link>span, #prevnext>a{
-        padding: 2px 1em;
-        background-color: #E03E61;
-        color: #fff;
-        border-radius: 4px;
-}
-*/
 
 .tags {
         text-align: right;
@@ -120,11 +154,18 @@ article>h2 {
 
 blockquote {
         margin: 0 auto;
-        font-style: italic;
-        font-size: 0.9em;
-        background-color: #f9f9f9;
-        padding: 1% 5%;
-        border-radius: 4px;
+        position: fixed;
+        height: 32px;
+        width: 100%;
+
+        display:flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: stretch;
+
+        color: #fff;
+        background-color: #E03E61;
+        box-shadow: 0 0px 16px rgba(0,0,0,0.5);
 }
 
 article img {
@@ -178,67 +219,6 @@ article img {border-radius: 4px; overflow: hidden;}
 }
 
 /* Navbar */
-
-#navbar {
-        position: fixed;
-        height: 32px;
-        width: 100%;
-
-        display:flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: stretch;
-
-        color: #fff;
-        background-color: #E03E61;
-        box-shadow: 0 0px 16px rgba(0,0,0,0.5);
-}
-
-#navbar>a {
-        margin: 0;
-        line-height: 32px;
-        text-align: center;
-
-        vertical-align: middle;
-        flex-basis: 6em;
-        flex-grow: 1;
-
-        color: #fff;
-}
-
-#navbar>a:hover {
-        background-color: #FF4C73;
-}
-
-.navspacer {
-        margin: 0;
-        flex-basis: 0;
-        flex-grow: 4;
-}
-
-#searchform {
-        flex-grow: 1;
-
-        display: flex;
-        justify-content: space-around;
-        align-items: stretch;
-}
-#searchform>input {
-        margin: 4px;
-        border-radius: 4px;
-}
-#searchform>input:nth-child(1) {
-        flex-grow: 3;
-}
-
-#searchform input {border: 1px solid #BF304F;}
-
-#searchform>input:nth-child(2) {
-        flex-grow: 1;
-        background-color: #E03E61;
-        color: #fff;
-}
-#searchform>input:nth-child(2):hover {background-color: #FF4C73;}
 
 /* Footer */
 #prevnext {
