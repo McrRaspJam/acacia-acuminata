@@ -46,8 +46,37 @@ function random_404_message() {
 
 /* Custom field posts */
 
+add_action('init', 'create_events_post_type');
 add_action('init', 'create_supporters_post_type');
 add_action('init', 'create_friends_post_type');
+
+function create_events_post_type() {
+        register_post_type('events',
+                array(
+                        'labels' => array(
+                                'name' => 'Events',
+                                'singular_name' => 'Event',
+                                'add_new' => 'Add New',
+                                'add_new_item' => 'Add New Event',
+                                'edit_item' => 'Edit Event',
+                                'new_item' => 'New Event',
+                                'all_items' => 'All Events',
+                                'view_item' => 'View Event',
+                                'search_items' => 'Search Events',
+                                'not_found' =>  'No Events Found',
+                                'not_found_in_trash' => 'No Events found in Trash',
+                                'menu_name' => 'Events',
+                        ),
+                        'public' => true,
+                        'has_archive' => true,
+                        'supports' => array('title', 'thumbnail'),
+                        'menu_position' => 5,
+                        'menu_icon' => 'dashicons-calendar-alt'
+                )
+        );
+
+        add_theme_support('post-thumbnails', array('events'));
+}
 
 function create_supporters_post_type() {
         register_post_type('supporters',
@@ -64,12 +93,13 @@ function create_supporters_post_type() {
                                 'search_items' => 'Search Supporters',
                                 'not_found' =>  'No Supporters Found',
                                 'not_found_in_trash' => 'No Supporters found in Trash',
-                                'menu_name' => 'Supporters',
+                                'menu_name' => 'Supporters'
                         ),
                         'public' => true,
                         'has_archive' => false,
                         'rewrite' => array('slug' => 'supporter'),
                         'supports' => array('title', 'excerpt', 'thumbnail'),
+                        'menu_icon' => 'dashicons-groups'
                 )
         );
 
@@ -92,12 +122,13 @@ function create_supporters_post_type() {
                                         'search_items' => 'Search Friends',
                                         'not_found' =>  'No Friends Found',
                                         'not_found_in_trash' => 'No Friends found in Trash',
-                                        'menu_name' => 'Friends',
+                                        'menu_name' => 'Friends'
                                 ),
                                 'public' => true,
                                 'has_archive' => false,
                                 'rewrite' => array('slug' => 'friend'),
                                 'supports' => array('title', 'excerpt', 'thumbnail'),
+                                'menu_icon' => 'dashicons-groups'
                         )
                 );
 

@@ -42,6 +42,7 @@ h2, h3, h2 a, h3 a {
 }
 h1, h1 a {
         color: #e5286d !important;
+        text-decoration: none !important;
         font-family: 'Oswald', sans-serif;
         font-weight: 400;
         text-align: center;
