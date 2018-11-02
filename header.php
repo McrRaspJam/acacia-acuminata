@@ -13,6 +13,8 @@
 		<?php get_template_part('nav', 'header'); ?>
 		<main id="page">
 			<header>
-				<h1><a href="<?php echo get_home_url(); ?>"><?php bloginfo('title'); ?></a></h1>
-				<em><?php bloginfo('description'); ?></em>
+				<a href="<?php echo get_home_url(); ?>">
+					<h1><?php bloginfo('title'); ?></h1>
+					<em><?php bloginfo('description'); ?></em>
+				</a>
 			</header>

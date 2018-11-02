@@ -1,6 +1,6 @@
 <div id="navbar">
         <div class="container">
-                <a href="<?php echo get_home_url(); ?>">
+                <a href="<?php echo get_home_url(); ?>" aria-hidden="true">
                         <img src="<?php echo get_site_icon_url($size = 40); ?>" />
                 </a>
                 <nav>
