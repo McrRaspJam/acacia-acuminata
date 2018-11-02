@@ -118,19 +118,19 @@ a {text-decoration: none;}
 /* Header */
 
 
-#page header {
+#page>header {
         padding-top: 2em;
         margin-bottom: 4em;
 
         text-align: center;
 }
 
-#page header h1 {
+#page>header h1 {
         font-size: 3rem;
         margin: 0 auto;
 }
 
-#page header em {
+#page>header em {
         font-size: 1.75rem;
         font-family: 'Oswald', sans-serif;
         line-height: 0.5;
@@ -138,7 +138,7 @@ a {text-decoration: none;}
         color: #777;
 }
 
-#page header a {
+#page>header a {
         display: block;
         text-decoration: none;
 }
